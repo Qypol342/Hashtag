@@ -3,6 +3,7 @@ from flask import Flask, jsonify
 import requests 
 import json
 import chardet
+import unidecode
 
 def get_lib():
     result = requests.get( 
@@ -39,7 +40,7 @@ def hashtag_():
 
 @app.route('/hashtag/<text>')
 def hashtag(text=''):
-    text_low = text.lower()
+    
 
     allow = [',','.',' ','!','?',"'",'"',":",";"]
     #text = text.encode('ascii').decode('uft-8')
@@ -51,13 +52,14 @@ def hashtag(text=''):
         lib = json.load(f)
     
     for i, v in lib.items():
-        text_low = text.lower()
+        text_low = unidecode.unidecode(text).lower()
+        print(text_low,)
         
         if i in text_low :
 
             
             if text_low.index(i) == 0 or text[text_low.index(i)-1] != '#':
-                p
+                
                 if text_low.index(i)+len(i)+1< len(text):
                     
                     if text[text_low.index(i)+len(i)] in allow:

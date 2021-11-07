@@ -61,5 +61,9 @@ def hashtag(text=''):
 
 if __name__ == '__main__':
  
+    try:
 
-    app.run()
+        app.run()
+    except Exception as e:
+        print("SERIOUS API ERROR",e)
+

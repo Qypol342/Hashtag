@@ -63,11 +63,14 @@
 "grève":"#Greve",
 "monde":"#Monde",
 "COP26":"#COP26",
-"vacances":"#Vacances",
 "frontiere":"#Frontiere",
 "frontieres":"#Frontieres",
-  
+
+"vacances":"#Vacances",
+"ecole":"#Ecole",
+"ecoles":"#Ecole",  
 "noel":"Noel",
+"chasse":"#chasse",
 
 "onu":"#ONU",
 "omc":"#OMC",
@@ -594,5 +597,12 @@
 "valenciennes":"#Valenciennes",
 "versailles":"#Versailles",
 "villeurbanne":"#Villeurbanne",
-"vitry-sur-seine":"#VitrySurSeine"
+"vitry-sur-seine":"#VitrySurSeine",
+
+"marine le pen":"#MarineLePen",
+"eric zemmour":"#EricZemmour",
+"emmanuel macron":"#EmmanuelMacron",
+"robert menard":"#RobertMenard",
+"joe biden":"#JoeBiden"
+
 }

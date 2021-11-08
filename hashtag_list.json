@@ -31,6 +31,8 @@
 
 "macron":"#macron",
 "gouvernement":"#Gouvernement",
+"president":"#President",
+"allocution":"#Allocution",
 "inégalité":"#Inegalite",
 "gilet jaune":"GiletJaunes",
 
@@ -603,6 +605,14 @@
 "eric zemmour":"#EricZemmour",
 "emmanuel macron":"#EmmanuelMacron",
 "robert menard":"#RobertMenard",
-"joe biden":"#JoeBiden"
+"joe biden":"#JoeBiden",
 
+"tpmp":"#TPMP",
+"tf1":"#TF1",
+"franceinfo":"#FranceInfo",
+"france2":"#France2",
+"france3":"#France3",
+"c8":"#C8",
+"m6":"#M6",
+"w9":"#W9"  
 }

@@ -32,6 +32,7 @@
 "macron":"#macron",
 "gouvernement":"#Gouvernement",
 "inégalité":"#Inegalite",
+"gilet jaune":"GiletJaunes",
 
 "covid-19":"#Covid19",
 "pass sanitaire":"#PassSanitaire",
@@ -40,6 +41,7 @@
 "coronavirus":"#Coronavirus",
 "vaccination":"#Vaccination",
 "covid":"#COVID",
+"pcr":"#PCR",
 
 "direct":"#direct",
 "Ligue1":"#Ligue1UberEats",
@@ -61,6 +63,10 @@
 "grève":"#Greve",
 "monde":"#Monde",
 "COP26":"#COP26",
+"vacances":"#Vacances",
+  
+"noel":"Noel",
+
 
 "onu":"#ONU",
 "omc":"#OMC",

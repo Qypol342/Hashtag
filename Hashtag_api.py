@@ -42,7 +42,7 @@ def hashtag_():
 def hashtag(text=''):
     
 
-    allow = [',','.',' ','!','?',"'",'"',":",";"]
+    allow = [',','.',' ','!','?',"'",'"',":",";","(",")"]
     #text = text.encode('ascii').decode('uft-8')
     try:   
         lib = get_lib()

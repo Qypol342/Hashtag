@@ -2,6 +2,7 @@ from flask import Flask, jsonify
 
 import requests 
 import json
+import chardet
 import unidecode
 
 def get_lib():
@@ -39,7 +40,6 @@ def hashtag_():
 
 @app.route('/hashtag/<text>')
 def hashtag(text=''):
-
     
 
     allow = [',','.',' ','!','?',"'",'"',":",";","(",")"]
@@ -52,23 +52,31 @@ def hashtag(text=''):
         lib = json.load(f)
     
     for i, v in lib.items():
-        
-
         text_low = unidecode.unidecode(text).lower()
         
-
         
         if i in text_low :
-            
 
             
             if text_low.index(i) == 0 or text[text_low.index(i)-1] != '#':
-                
-                if text_low.index(i)+len(i)+1< len(text):
-                    
-                    if text[text_low.index(i)+len(i)] in allow:
-                        inn = text_low.index(i)
-                        text = text[:inn] + lib[i] + text[inn + len(i):]
+
+                if text_low.index(i) != 0:
+                    print("cheking first char",text[text_low.index(i)-1],"in",text[text_low.index(i)-1] not in allow)
+
+
+                if text_low.index(i) != 0 and text[text_low.index(i)-1] not in allow: 
+                    """
+                    arreter si le caractère devant fait pas parti de la liste autoriser
+                    """
+                    break
+                if text_low.index(i)+len(i)< len(text):
+
+                    print("cheking last char",text[text_low.index(i)+len(i)],"in",text[text_low.index(i)+len(i)] not in allow)
+                if text_low.index(i)+len(i)< len(text) and text[text_low.index(i)+len(i)] not in allow:
+                    """
+                    arreter si le caractère apres fait pas parti de la liste autoriser
+                    """
+                    break
 
 
                 else:
@@ -76,6 +84,7 @@ def hashtag(text=''):
                     inn = text_low.index(i)
                     
                     text = text[:inn] + lib[i] + text[inn + len(i):]
+
     print('here',type(text),text)
     
     

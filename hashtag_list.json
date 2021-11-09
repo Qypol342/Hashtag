@@ -7,6 +7,7 @@
 "gilet jaune":"GiletJaunes",
 "pass sanitaire":"#PassSanitaire",
 "virgin galactic":"#VirginGalactic",
+"union europeenne":"#UnionEuropeenne",
 
 "inspiration":"#Inspiration4",
 "Dragon":"#Dragon",
@@ -31,6 +32,7 @@
 "rolls-royce":"#RollsRoyce",
 "latam":"#LATAM",
 "faa":"#FAA",
+"ingenuity":"#Ingenuity",
 
 "lufthansa":"#Lufthansa",
 "klm":"#KLM",
@@ -92,6 +94,8 @@
 "COP26":"#COP26",
 "frontiere":"#Frontiere",
 "frontieres":"#Frontieres",
+"migrant":"#migrant",
+"migrants":"#migrants",
 
 "vacances":"#Vacances",
 "ecole":"#Ecole",
@@ -109,6 +113,19 @@
 "grdf":"#GRDF",
 
 "europe":"#Europe",
+"asie":"#Asie",
+
+"amerique du sud":"#AmeriqueDuSud",
+"amerique du nord":"#AmeriqueDuNord",
+"oceanie":"#Oceanie",
+
+"mars":"#Mars",
+"venus":"#Venus",
+"uranus":"#Uranus",
+"lune":"#Lune",
+"netpune":"#Neptune",
+"pluton":"#Pluton",
+
 "afrique du sud":"#AfriqueDuSud",	
 "afghanistan":"#Afghanistan",	
 "albanie":"#Albanie",	
@@ -305,6 +322,8 @@
 "yemen":"#Yemen",	
 "zambie":"#Zambie",	
 "zimbabwe":"#Zimbabwe",
+
+"afrique":"#Afrique",
 
 "alabama":"#Alabama",
 "alaska":"#Alaska",

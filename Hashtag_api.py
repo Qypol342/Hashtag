@@ -2,12 +2,11 @@ from flask import Flask, jsonify
 
 import requests 
 import json
-import chardet
 import unidecode
 
 def get_lib():
     result = requests.get( 
-              "https://raw.githubusercontent.com/Qypol342/Hashtag/e0f690fa08e330e526ffe29f8f8112c54207e8f4/hashtag_list.json",
+              "https://raw.githubusercontent.com/Qypol342/Hashtag/main/hashtag_list.json",
 
              
     ) 
@@ -40,6 +39,7 @@ def hashtag_():
 
 @app.route('/hashtag/<text>')
 def hashtag(text=''):
+
     
 
     allow = [',','.',' ','!','?',"'",'"',":",";","(",")"]
@@ -52,10 +52,14 @@ def hashtag(text=''):
         lib = json.load(f)
     
     for i, v in lib.items():
+        
+
         text_low = unidecode.unidecode(text).lower()
-        print(text_low,)
+        
+
         
         if i in text_low :
+            
 
             
             if text_low.index(i) == 0 or text[text_low.index(i)-1] != '#':

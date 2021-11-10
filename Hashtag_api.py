@@ -2,7 +2,7 @@ from flask import Flask, jsonify
 
 import requests 
 import json
-import chardet
+
 import unidecode
 
 def get_lib():
@@ -68,7 +68,7 @@ def hashtag(text=''):
                     """
                     arreter si le caractère devant fait pas parti de la liste autoriser
                     """
-                    break
+                    continue
                 if text_low.index(i)+len(i)< len(text):
 
                     print("cheking last char",text[text_low.index(i)+len(i)],"in",text[text_low.index(i)+len(i)] not in allow)
@@ -76,7 +76,7 @@ def hashtag(text=''):
                     """
                     arreter si le caractère apres fait pas parti de la liste autoriser
                     """
-                    break
+                    continue
 
 
                 else:

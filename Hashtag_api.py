@@ -40,7 +40,7 @@ def hashtag_():
 
 @app.route('/hashtag/<text>')
 def hashtag(text=''):
-    
+    print("[INFO] Incoming request")
 
     allow = [',','.',' ','!','?',"'",'"',":",";","(",")"]
     
@@ -52,7 +52,7 @@ def hashtag(text=''):
         lib = json.load(f)
     
     for i, v in lib.items():
-        print("[INFO] Incoming request")
+        
         text_low = unidecode.unidecode(text).lower()
         
         

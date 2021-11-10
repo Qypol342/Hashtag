@@ -43,7 +43,7 @@ def hashtag(text=''):
     
 
     allow = [',','.',' ','!','?',"'",'"',":",";","(",")"]
-    #text = text.encode('ascii').decode('uft-8')
+    
     try:   
         lib = get_lib()
     except Exception as e:
@@ -52,6 +52,7 @@ def hashtag(text=''):
         lib = json.load(f)
     
     for i, v in lib.items():
+        print("[INFO] Incoming request")
         text_low = unidecode.unidecode(text).lower()
         
         
@@ -80,17 +81,18 @@ def hashtag(text=''):
 
 
                 else:
-                    
+                    print("[INFO] hashtag found :",lib[i])
                     inn = text_low.index(i)
                     
                     text = text[:inn] + lib[i] + text[inn + len(i):]
 
-    print('here',type(text),text)
+    
     
     
     test = bytes(text,'UTF-8')
 
     res = {'hashtaged':text}
+    print("[INFO] Reply successfully")
   
     return jsonify(res)
 
@@ -102,9 +104,9 @@ def hashtag(text=''):
 if __name__ == '__main__':
  
     try:
-
+        print( "[INFO] Starting...")
         app.run()
 
     except Exception as e:
-        print("SERIOUS API ERROR",e)
+        print("[ERROR] SERIOUS API ERROR",e)
 

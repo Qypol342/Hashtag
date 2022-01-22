@@ -3,6 +3,10 @@ from flask import Flask, jsonify
 import requests 
 import json
 
+try:
+    from rich import print
+except Exception as e:
+    print("[ERROR] no color print")
 import unidecode
 
 def get_lib():
@@ -40,7 +44,7 @@ def hashtag_():
 
 @app.route('/hashtag/<text>')
 def hashtag(text=''):
-    print("[INFO] Incoming request")
+    print("[bold green][INFO][/bold green] Incoming request")
 
     allow = [',','.',' ','!','?',"'",'"',":",";","(",")"]
     
@@ -52,6 +56,10 @@ def hashtag(text=''):
         lib = json.load(f)
     
     for i, v in lib.items():
+
+        if len(text) >= 280:
+            print("[bold red][INFO][/bold red] text to long to add hashtag")
+            break
         
         text_low = unidecode.unidecode(text).lower()
         
@@ -81,7 +89,7 @@ def hashtag(text=''):
 
 
                 else:
-                    print("[INFO] hashtag found :",lib[i])
+                    print("[bold green][INFO][/bold green] hashtag found :",lib[i])
                     inn = text_low.index(i)
                     
                     text = text[:inn] + lib[i] + text[inn + len(i):]
@@ -92,7 +100,7 @@ def hashtag(text=''):
     test = bytes(text,'UTF-8')
 
     res = {'hashtaged':text}
-    print("[INFO] Reply successfully")
+    print("[bold green][INFO][/bold green] Reply successfully")
   
     return jsonify(res)
 
@@ -104,9 +112,9 @@ def hashtag(text=''):
 if __name__ == '__main__':
  
     try:
-        print( "[INFO] Starting...")
+        print( "[bold green][INFO][/bold green] Starting...")
         app.run()
 
     except Exception as e:
-        print("[ERROR] SERIOUS API ERROR",e)
+        print("[bold red][INFO][/bold red] SERIOUS API ERROR",e)
 

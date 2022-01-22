@@ -58,7 +58,7 @@ def hashtag(text=''):
     for i, v in lib.items():
 
         if len(text) >= 280:
-            print("[bold red][INFO][/bold red] text to long to add hashtag")
+            print("[bold red][ERROR][/bold red] text to long to add hashtag")
             break
         
         text_low = unidecode.unidecode(text).lower()
@@ -116,5 +116,5 @@ if __name__ == '__main__':
         app.run()
 
     except Exception as e:
-        print("[bold red][INFO][/bold red] SERIOUS API ERROR",e)
+        print("[bold red][ERROR][/bold red] SERIOUS API ERROR",e)
 
